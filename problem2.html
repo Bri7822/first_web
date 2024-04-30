@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+<title>The Sum</title>
+</head>
+<body>
+<fieldset>
+ <legend>Fill in the field below and submit</legend>
+  Q2 <label for= "answer1"><input type="text" id="answer1" class="input1" placeholder="Enter your value"/></label>
+  <button  id="sub" class="" >Submit</button>
+  <div id="displayer">
+  </div> 
+ </fieldset>
+<script>
+ 
+ function display()
+  {
+    let sum = 0;
+    let maxValue = parseInt(document.getElementById("answer1").value);
+    let area = document.getElementById("displayer");
+    let fibonacci = [1,2];
+    let nextNumber;
+       let indexNum = 1;
+    do{
+        if (fibonacci[indexNum] % 2 === 0) {
+            sum += fibonacci[indexNum];
+        }
+       fibonacci.push(fibonacci[indexNum - 1] + fibonacci[indexNum]);
+        indexNum++;
+      }while(fibonacci[indexNum] <= maxValue)
+        area.textContent = "Sum of even numbers:  "+ sum ;
+        
+  }      
+  let butt = document.getElementById('sub');
+  butt.addEventListener("click",display);
+
+</script>
+</body>
+</html>

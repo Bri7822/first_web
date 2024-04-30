@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+<title>The Sum</title>
+</head>
+<body>
+<fieldset>
+ <legend>Fill in the fields below and submit</legend>
+  Q3 <label for= "answer1"><input type="text" id="answer1" class="input1" placeholder="Enter your length"/></label>
+     <button  id="sub" class="" >Submit</button>
+  <div id="displayer">
+  </div> 
+ </fieldset>
+
+<script>
+ 
+ function display()
+  {
+    let maxInput = parseInt(document.getElementById("answer1").value);
+    let area = document.getElementById("displayer");
+        if(isNaN(maxInput) || maxInput <= 1 )
+        {
+          area.textContent = "Enter a greater number than one or a valid number ";
+        }
+          let firstPrime = 2;
+          let primeNumbers = []; 
+          let iteratingNum = 0;
+          let answer;
+    
+      do
+      {
+          if(maxInput % firstPrime === 0)
+          {
+            primeNumbers[iteratingNum] = firstPrime;
+            maxInput /= firstPrime;
+            iteratingNum++;
+          }else{
+                firstPrime++;
+          }
+         
+      }while(maxInput > 1);
+
+        answer = primeNumbers.pop();
+        area.textContent = " "+ answer;           
+  } 
+
+    let butt = document.getElementById('sub');
+    butt.addEventListener("click",display);
+
+</script>
+</body>
+</html>

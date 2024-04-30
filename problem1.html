@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+<title>The Sum</title>
+</head>
+<body>
+<fieldset>
+ <legend>Fill in the fields below and submit</legend>
+  Q1 <label for= "answer1"><input type="text" id="answer1" class="input1" placeholder="Enter your value"/></label>
+  <label for= "answer2"><input type="text" id="answer2" class="input2" placeholder="Enter your value"/></label>
+  <button  id="sub" class="" >Submit</button>
+  <div id="displayer">
+  </div> 
+ </fieldset>
+<script>
+ 
+ function display()
+  {
+    let value1 = parseInt(document.getElementById("answer1").value);
+    let value2 = parseInt( document.getElementById("answer2").value);
+    let area = document.getElementById("displayer");
+
+      let sum1 = 0;
+      let sum2 = 0;
+      let redundantSum = 0;
+       
+      //summing the first multiples below 1000
+        for(let x = 0 ; x < 1000; x = x + value1)
+        {
+          if(x % value1 === 0)
+          {
+            sum1 += x;
+          }
+             
+        } 
+           //summing the second multiples below 1000
+        for(let x = 0 ; x < 1000; x = x + value2)
+        {
+          if(x % value2 === 0)
+          {
+            sum2 += x;
+          }
+             
+        } 
+         //Redundant multiples  
+        for(let x = 0 ; x < 1000; x = x + value2)
+        {
+          if(x % value1 === 0)
+          {
+            redundantSum += x;
+          }
+             
+        } 
+        //summing the total
+        let total = sum1 + sum2 - redundantSum;  
+        area.textContent = "Multiple 1: "+sum1+ "\n Multiple 2: "+ sum2 + " \n Total is "+ total ;
+        
+  }      
+  let butt = document.getElementById('sub');
+  butt.addEventListener("click",display);
+
+</script>
+</body>
+</html>
