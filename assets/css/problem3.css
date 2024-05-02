@@ -1,0 +1,43 @@
+:root{
+    --need : rgb(49, 195, 195);
+    --bluea:rgb(32, 32, 160);
+
+}
+body{  
+    
+   background-image: url("../images/ground.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-clip: var(--need);
+}
+.forSearch{
+    margin-right: 250px;
+}
+.form-control{
+    width:20pc;      
+}
+.nav-item{
+         margin-top: -3px;
+}
+strong:hover {
+        outline: auto ;
+}
+span {
+    margin-right:3pc;   
+    font-size: 20px;
+}
+.calCard {
+    margin-top:10pc;   
+    font-size: 20px;
+    align-items: center;
+}
+.input2,.input1{
+        border: 0px;
+
+}
+#sub{
+      border: solid 1px var(--bluea);
+}
+input{
+     text-align:center;
+}
