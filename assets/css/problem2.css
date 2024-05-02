@@ -5,7 +5,7 @@
 }
 body{  
     
-   background-image: url("../images/ground.jpg");
+    background-image: url("../images/ground.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    background-clip: var(--need);
@@ -27,10 +27,9 @@ span {
     font-size: 20px;
 }
 .calCard {
-    margin-left: -7pc;
     margin-top:10pc;   
     font-size: 20px;
-    width:55pc;
+    width:45pc;
     align-items: center;
 }
 .input2,.input1{
@@ -39,21 +38,10 @@ span {
 }
 #sub{
       border: solid 1px var(--bluea);
-      align-items: center;
 }
 input{
      text-align:center;
 }
 .cen{
      justify-content: center;
-     font-size: 20px ;
-}
-.row {
-        margin-top: 70px;
-}
-button{
-      align-content: center;
-}
-a{
-    text-decoration: none;
 }
