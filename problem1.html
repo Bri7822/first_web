@@ -48,9 +48,10 @@
                             <p class=""> Euler was born into a family of Protestant ministers, and his father wanted him to follow in the family tradition. However, Euler's aptitude for mathematics was evident from an early age, and he pursued his passion for the subject. He studied at the University of Basel and later at the University of Saint Petersburg.</p>
                             <div class="card-header d-flex justify-content-center"> <h5 class="card-title"><b>Quiz-1:   Fill in two numbers to find the Sum of their multiples.</b></h5></div>
                                   <div class="card-body">
-                                    <div class="card-text d-block">
+                                     <div class="card-text d-block bum">
                                         <label for= "answer1"><input type="text" id="answer1" class="input1 rounded-pill" placeholder="Enter your value"/></label>
                                         <label for= "answer2"><input type="text" id="answer2" class="input2 rounded-pill" placeholder="Enter your value"/></label>
+                                        <label for= "answer2"><input type="text" id="limit" class="input2 rounded-pill" placeholder="Enter your max number"/></label>
                                         <button  id="sub" class="btn btn-outline-primary my-2 my-sm-0 rounded-pill" >Submit</button>
                                         <div id="displayer">
                                         </div>   
@@ -125,14 +126,14 @@
   {
     let value1 = parseInt(document.getElementById("answer1").value);
     let value2 = parseInt( document.getElementById("answer2").value);
+    let limitNum = parseInt( document.getElementById("limit").value);    
     let area = document.getElementById("displayer");
 
       let sum1 = 0;
       let sum2 = 0;
-      let redundantSum = 0;
        
       //summing the first multiples below 1000
-        for(let x = 0 ; x < 1000; x = x + value1)
+        for(let x = 0 ; x < limitNum; x = x + value1)
         {
           if(x % value1 === 0)
           {
@@ -141,7 +142,7 @@
              
         } 
            //summing the second multiples below 1000
-        for(let x = 0 ; x < 1000; x = x + value2)
+        for(let x = 0 ; x < limitNum; x = x + value2)
         {
           if(x % value2 === 0)
           {
