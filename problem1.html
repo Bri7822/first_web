@@ -150,17 +150,10 @@
              
         } 
          //Redundant multiples  
-        for(let x = 0 ; x < 1000; x = x + value2)
-        {
-          if(x % value1 === 0)
-          {
-            redundantSum += x;
-          }
-             
-        } 
+        
         //summing the total
-        let total = sum1 + sum2 - redundantSum;  
-        area.textContent = "Multiple 1: "+sum1+ "\n Multiple 2: "+ sum2 + " \n Total is "+ total ;
+        let total = sum1 + sum2;  
+        area.textContent = "Total is "+ total ;
         
   }      
   let butt = document.getElementById('sub');
